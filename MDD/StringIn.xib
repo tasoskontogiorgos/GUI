@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="StringIn" customModule="MDD" customModuleProvider="target">
+            <connections>
+                <outlet property="Message" destination="TaU-Es-PAh" id="hFi-dT-na5"/>
+                <outlet property="Value" destination="f3H-Dg-Y3W" id="d0n-hU-zAM"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="406" height="155"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-Dg-Y3W">
+                        <rect key="frame" x="105" y="78" width="197" height="22"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="NY8-ye-DoK">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="ValueEntered:" target="-2" id="ayS-VW-VKb"/>
+                        </connections>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-Es-PAh">
+                        <rect key="frame" x="18" y="117" width="370" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="5OV-C8-vsG"/>
+                        </constraints>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="hEp-yp-YK4">
+                            <font key="font" metaFont="systemHeavy" size="13"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8QD-SS-pWY">
+                        <rect key="frame" x="99" y="24" width="81" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="Lq7-bN-JLe"/>
+                        </constraints>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Acg-Z9-gfg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="okayButtonClicked:" target="-2" id="XWh-Iu-6ya"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-qS-Pa3">
+                        <rect key="frame" x="227" y="24" width="81" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="lGm-4k-yvJ"/>
+                        </constraints>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YpX-dQ-RBu">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelButtonClicked:" target="-2" id="gGx-hY-z20"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gaF-qS-Pa3" firstAttribute="baseline" secondItem="8QD-SS-pWY" secondAttribute="baseline" id="8To-xT-Drr"/>
+                    <constraint firstAttribute="trailing" secondItem="TaU-Es-PAh" secondAttribute="trailing" constant="20" symbolic="YES" id="C8b-j4-9Zc"/>
+                    <constraint firstItem="8QD-SS-pWY" firstAttribute="top" secondItem="f3H-Dg-Y3W" secondAttribute="bottom" constant="26" id="EOR-fS-yIY"/>
+                    <constraint firstItem="f3H-Dg-Y3W" firstAttribute="trailing" secondItem="gaF-qS-Pa3" secondAttribute="trailing" id="MvS-vU-JWe"/>
+                    <constraint firstItem="TaU-Es-PAh" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="14" id="T63-Qc-xZv"/>
+                    <constraint firstItem="8QD-SS-pWY" firstAttribute="leading" secondItem="f3H-Dg-Y3W" secondAttribute="leading" id="aYp-FR-CO7"/>
+                    <constraint firstItem="TaU-Es-PAh" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="eAR-i1-hnk"/>
+                    <constraint firstItem="gaF-qS-Pa3" firstAttribute="leading" secondItem="8QD-SS-pWY" secondAttribute="trailing" constant="59" id="gpl-q7-dyF"/>
+                    <constraint firstItem="f3H-Dg-Y3W" firstAttribute="top" secondItem="TaU-Es-PAh" secondAttribute="bottom" constant="17" id="o0K-GG-6qs"/>
+                    <constraint firstItem="TaU-Es-PAh" firstAttribute="centerX" secondItem="f3H-Dg-Y3W" secondAttribute="centerX" id="vNu-T0-ZWb"/>
+                </constraints>
+                <animations/>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="242" y="377.5"/>
+        </window>
+    </objects>
+</document>
